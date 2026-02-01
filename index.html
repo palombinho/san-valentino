@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>San Valentino 💘</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #e63946;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" id="page1">
+  <h1>💘 San Valentino 💘</h1>
+  <p>Ho una domanda molto importante per te...</p>
+  <h2>Vuoi passare San Valentino con me? 🥰</h2>
+  <button class="yes" onclick="accept()">Sì 💖</button>
+  <button class="no" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<div class="card" id="page2" style="display:none;">
+  <h1>🎉 Evviva! 🎉</h1>
+  <p>Allora preparati perché...</p>
+  <h2>📍 Dove andiamo</h2>
+  <p><strong>[INSERISCI QUI IL POSTO]</strong></p>
+
+  <h2>💑 Cosa faremo</h2>
+  <p>[Cena romantica / passeggiata / sorpresa segreta 😏]</p>
+
+  <p>Non vedo l’ora ❤️</p>
+</div>
+
+<script>
+  function accept() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+  }
+
+  function moveNo() {
+    const btn = document.querySelector(".no");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+</script>
+
+</body>
+</html>
