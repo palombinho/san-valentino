@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>San Valentino 💘</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #e63946;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+      position: relative;
+    }
+    .gifs {
+     margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+}
+      .gifs img {
+             width: 100px;
+
+    display: block;
+    margin: 10px;
+     
+  }
+  #bgVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  width: 95%; 
+  transform: translate(-50%, -50%);
+  height: auto;
+  border-radius: 15px;
+  max-height: 90vh;
+  object-fit: cover; /* riempie tutto lo sfondo senza distorsione */
+  z-index: -1;       /* dietro il contenuto */
+}
+
+#page1 .content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: black;       /* testo leggibile sopra il video */
+}
+
+  </style>
+</head>
+<body>
+
+<div class="card" id="page1">
+    <video playsinline loop id="bgVideo">
+    <source src="Love.mp4" type="video/mp4">
+    Il tuo browser non supporta i video HTML5
+  </video>
+  <button id="videoBtn" onclick="toggleVideo()">▶️ Avvia video</button>
+
+   <div class="content">
+  <h1>💘 San Valentino 💘</h1>
+  <p>Ho una domanda molto importante per te...</p>
+  <h2>Vuoi passare San Valentino con me? 🥰</h2>
+  <a href="evviva.html">
+  <button class = "si"> Sì 💖</button>
+</a>
+  <button class="no" onmouseover="moveNo()">No 😢</button>
+  <div class="gifs">
+  <img src="videosi.gif" alt="gif si">
+  <img src="videono.gif" alt="gif no">
+</div>
+</div>
+</div>
+
+
+
+<div class="card" id="page2" style="display:none;">
+  <h1>🎉 Evviva! 🎉</h1>
+  <p>Allora preparati perché...</p>
+  <h2>📍 Dove andiamo</h2>
+<a href="gilipollas.html">
+  <button>Clicca qui</button>
+</a>
+
+  <h2>💑 Cosa faremo</h2>
+  <p>[Cena romantica / passeggiata / sorpresa segreta 😏]</p>
+
+  <p>Non vedo l’ora ❤️</p>
+</div>
+
+<script>
+
+
+  function moveNo() {
+    const btn = document.querySelector(".no");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+  function toggleVideo() {
+  const video = document.getElementById("bgVideo");
+  const btn = document.getElementById("videoBtn");
+
+  if (video.paused) {
+    video.play();
+    btn.textContent = "⏸️ Ferma video";
+  } else {
+    video.pause();
+    btn.textContent = "▶️ Avvia video";
+  }
+}
+</script>
+
+</body>
+</html>
+

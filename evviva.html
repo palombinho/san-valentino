@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVVIVA</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+        .buttons {
+      position: relative;
+      width: 100%;
+      height: 200px;
+    }
+        button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="card" id="page1">
+  <h1>🎉 Evviva! 🎉</h1>
+  <p>Allora preparati perché...</p>
+  <h2>📍 Dove andiamo</h2>
+<a href="gilipollas.html">
+  <button>Clicca qui</button>
+</a>
+
+  <h2>💑 Cosa faremo</h2>
+<a href="guanti.html">
+  <button>Clicca qui</button>
+</a>
+
+<h2>Due parole per accedere alla pagina segreta 💌</h2>
+<input id="code" placeholder="..." />
+<button onclick="check()">OK</button>
+
+  
+</div>
+<script>
+function check() {
+  const v = document.getElementById("code").value.toLowerCase();
+  if (v === "ti amo") {
+    window.location.href = "segreta.html";
+  } else {
+    alert("Nope 😇");
+  }
+}
+</script>
+</body>
+</html>

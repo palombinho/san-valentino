@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GILIPOLLAS</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      position: relative;
+      width: 100%;
+      height: 200px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .trap-img {
+  width: 300px;
+  max-width: 80%;
+  border-radius: 20px;
+  margin: 15px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* distanza tra le immagini */
+  margin: 15px 0;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>GILIPOLLAS!! </h1>
+
+ <div class="images">
+  <img src="FloPixel.jpeg" alt="Noi due" class="trap-img">
+  <img src="Gilipo.jpeg" alt="Noi due" class="trap-img">
+</div>
+
+<button class="back" onclick="goBack()">⬅ Torna indietro</button>
+
+
+
+  <script>
+    function goNext() {
+      window.location.href = "trap2.html";
+    }
+    function goBack() {
+  window.history.back();
+}
+
+  </script>
+
+</body>
+</html>
